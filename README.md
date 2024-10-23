@@ -29,5 +29,18 @@ Residential Construction Permits by County
 - For this dataset I am mainly interested in the count of loans per county.
 - [Dataset at arcgis.com](https://hudgis-hud.opendata.arcgis.com/datasets/HUD::residential-construction-permits-by-county/about)
 
-### Project
-In this project, I will analyze the median property values where people have applied for loans between 2018 and 2023. In places with vast changes in pricing, I will look at the demographics that have been applying for loans before and after. This is intended to find places that have experienced gentrification and see if we can correlate it with certain changes, such as construction, non-person borrowers, or commuter statistics.
+### Research Goals and Questions
+My primary goal is to measure gentrification and see how it changes the affected areas. Secondarily, I would like to use these findings to attempt to find early indicators of gentrification and what can be changed to mitigate the affect on the community.
+Questions:
+1.	Which counties’ median/mean house prices change by significantly more than average each year? (t-tests of percentage of median/mean increase between two years, derived from median/mean house price of all loan applications by county)
+2.	Do these increased change rates persist (i. e. If a county increases home value by a large amount one year, is it likely to increase similarly the next year)? (strength and slope of correlation by county from the above derived data)
+3.	Do these counties have a consistent distance to a large city? (i. e. Are people working in major cities moving slightly further away and commuting?) (Mean, median, and standard deviation of the distance for each highlighted county to the closest major city)
+4.	Do these counties experience a change in the demographics applying for loans? (Chi-squared test of demographics)
+5.	Do an increase in home improvement loans and non-person lenders accompany rising prices? (correlation analysis, price by amount of loans)
+6.	Does the number of commuters change in these counties?  (correlation analysis, price by number of commuters)
+7.	Do these counties have an unusually high number of building permits? (Poisson Regression, count of permits and price)
+8.	When do the above changes start appearing (same year as price increase, before, after)? (Granger Causality, price by the above variables)
+9.	Are there other counties showing some of the above patterns but not experiencing housing price increases? (k-mean clustering of the patterns found)
+10.	Due to the policy changes in 2018, I don’t have much longitudinal data to look at. However, to test my findings, can I find older occurrences of the same patterns and match it with historical gentrification? (k-mean clustering with older data and then researching housing prices in notable areas)
+11.	Are there counties that are exhibiting the early sign of gentrification right now? (k-mean clustering of found patterns)
+
