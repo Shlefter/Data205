@@ -16,7 +16,7 @@ The variables I will be working with are as follows:
 - County code
 - Derived Race
 - Derived Ethnicity
-- Action type (filter for only applications)
+- Action type (filter to use loan originated to avoid double counting)
 - Number of units
 
 
