@@ -7,14 +7,17 @@ The Data 205 class is designed to teach the students about real-life data scienc
 ## Project Information
 
 ### Datasets
-This project will be using the HMDA public dataset, which can be found either at their website [cfpb.gov data browser](https://ffiec.cfpb.gov/data-browser/) or via their [data science kit](https://github.com/cfpb/HMDA_Data_Science_Kit). The Home Morgage Disclosure Act requires all lenders to submit records of their morgage loans, and some of that information is released to the public by the CFPB. Note that there was a significant policy change in 2018, and the list of variables released was altered with it. Due to this, I will only be using the data from 2018 and on as property value was not released for earlier years.
+This project will be using the HMDA public dataset, which can be found either at their website [cfpb.gov data browser](https://ffiec.cfpb.gov/data-browser/) or via their [data science kit](https://github.com/cfpb/HMDA_Data_Science_Kit). The Home Morgage Disclosure Act requires coveed lenders (the full list of which can been seen in the HMDA panel and transmittal sheets) to submit records of their morgage loans, and some of that information is released to the public by the CFPB. Note that there was a significant regulation change in 2018, and the list of variables released was altered with it. Due to this, I will only be using the data from 2018 and on as property value was not collected in earlier years.
 
 The variables I will be working with are as follows:
 - Property value
+- Loan amount
+- loan purpose (home purchase vs improvement)
 - County code
 - Derived Race
 - Derived Ethnicity
 - Action type (filter for only applications)
+- Number of units
 
 
 In addition to the HMDA dataset, I will be using several external datasets for different measures of gentrification:
@@ -30,7 +33,7 @@ Residential Construction Permits by County
 - [Dataset at arcgis.com](https://hudgis-hud.opendata.arcgis.com/datasets/HUD::residential-construction-permits-by-county/about)
 
 ### Research Goals and Questions
-My primary goal is to measure gentrification and see how it changes the affected areas. Secondarily, I would like to use these findings to attempt to find early indicators of gentrification and what can be changed to mitigate the affect on the community.
+My primary goal is to measure gentrification and see how it changes the affected areas. Secondarily, I would like to use these findings to attempt to find early indicators of gentrification and what can be changed to mitigate the affect on the community. For this project, I am defining gentrification as a median housing price increase that is statisstically significatly larger than the 95% confidence interval of the population of counties year over year.
 Questions:
 1.	Which counties’ median/mean house prices change by significantly more than average each year? (t-tests of percentage of median/mean increase between two years, derived from median/mean house price of all loan applications by county)
 2.	Do these increased change rates persist (i. e. If a county increases home value by a large amount one year, is it likely to increase similarly the next year)? (strength and slope of correlation by county from the above derived data)
