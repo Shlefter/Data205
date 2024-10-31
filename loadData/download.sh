@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# work regardless of working directory:
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd "$parent_path"
+
 # Note that this script was mostly taken from the HMDA data science kit. I added the newer additions of the data wherever available and commented out the older data which I do not need for this project to save time
 
 #Note: the data files used are either Snapshot, Final, or Ultimate, whichever is latest
