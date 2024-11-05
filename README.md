@@ -16,7 +16,7 @@ The variables I will be working with are as follows:
 - County code
 - Derived Race
 - Derived Ethnicity
-- Action type (filter for only applications)
+- Action type (filter to use loan originated to avoid double counting)
 - Number of units
 
 
@@ -33,7 +33,7 @@ Residential Construction Permits by County
 - [Dataset at arcgis.com](https://hudgis-hud.opendata.arcgis.com/datasets/HUD::residential-construction-permits-by-county/about)
 
 ### Research Goals and Questions
-My primary goal is to measure housing price changes over time and see how it correlates with changes in the surrounding areas. Secondarily, I would like to use these findings to attempt to find early indicators of housing price change movements and what can be changed to mitigate the movements. For this project, I will be looking at counties where the median housing price increases statisstically significatly larger (95% confidence interval) than the population of counties year over year.
+My primary goal is to measure housing price changes over time and see how it correlates with changes in the surrounding areas. Secondarily, I would like to use these findings to attempt to find early indicators of housing price change movements and what can be changed to mitigate the movements. For this project, I will be looking at counties where the median housing price increases statisstically significatly larger (95% confidence interval) than the population of counties year over year. Note I will be using median instead of mean because medians are more resistant to outliers, of which the HMDA dataset has many.
 Questions:
 1.	Which counties’ median house prices change by significantly more than average each year? (t-tests of percentage of median increase between two years, derived from median house price of all loan applications by county)
 2.	Do these increased change rates persist (i. e. If a county increases home value by a large amount one year, is it likely to increase similarly the next year)? (strength and slope of correlation by county from the above derived data)
