@@ -1,5 +1,5 @@
 # Data205 Capstone
-The primary objective of this project is to create a useful data product that can potentially shed light on the risks of certain changes for a community. To do this, I will be looking at house value changes over time and if the demographic applying for morgage loans changes with it. 
+The primary objective of this project is to create a useful data product that can potentially shed light on the risks of certain changes for a community. To do this, I will be looking at house value changes over time by county and if the demographic applying for morgage loans changes with it. 
 
 ## Class Summary
 The Data 205 class is designed to teach the students about real-life data science projects and processes. This is done in two ways: by teaching the skills needed for working in a proffesional environment (such as git and SQL), and through internship programs to give the student a proffesional environment to work in and have thm create a real, useful product.
@@ -20,7 +20,7 @@ The variables I will be working with are as follows:
 - Number of units
 
 
-In addition to the HMDA dataset, I will be using several external datasets for different measures of gentrification:
+In addition to the HMDA dataset, I will be using several external datasets:
 
 Citizens Connect - County Data
 - data about the estimated number of commuters by county. Not that as of 10/15/2024, this dataset only includes until 2020.
@@ -33,9 +33,9 @@ Residential Construction Permits by County
 - [Dataset at arcgis.com](https://hudgis-hud.opendata.arcgis.com/datasets/HUD::residential-construction-permits-by-county/about)
 
 ### Research Goals and Questions
-My primary goal is to measure gentrification and see how it changes the affected areas. Secondarily, I would like to use these findings to attempt to find early indicators of gentrification and what can be changed to mitigate the affect on the community. For this project, I am defining gentrification as a median housing price increase that is statisstically significatly larger than the 95% confidence interval of the population of counties year over year.
+My primary goal is to measure housing price changes over time and see how it correlates with changes in the surrounding areas. Secondarily, I would like to use these findings to attempt to find early indicators of housing price change movements and what can be changed to mitigate the movements. For this project, I will be looking at counties where the median housing price increases statisstically significatly larger (95% confidence interval) than the population of counties year over year. Note I will be using median instead of mean because medians are more resistant to outliers, of which the HMDA dataset has many.
 Questions:
-1.	Which counties’ median/mean house prices change by significantly more than average each year? (t-tests of percentage of median/mean increase between two years, derived from median/mean house price of all loan applications by county)
+1.	Which counties’ median house prices change by significantly more than average each year? (t-tests of percentage of median increase between two years, derived from median house price of all loan applications by county)
 2.	Do these increased change rates persist (i. e. If a county increases home value by a large amount one year, is it likely to increase similarly the next year)? (strength and slope of correlation by county from the above derived data)
 3.	Do these counties have a consistent distance to a large city? (i. e. Are people working in major cities moving slightly further away and commuting?) (Mean, median, and standard deviation of the distance for each highlighted county to the closest major city)
 4.	Do these counties experience a change in the demographics applying for loans? (Chi-squared test of demographics)
@@ -44,6 +44,6 @@ Questions:
 7.	Do these counties have an unusually high number of building permits? (Poisson Regression, count of permits and price)
 8.	When do the above changes start appearing (same year as price increase, before, after)? (Granger Causality, price by the above variables)
 9.	Are there other counties showing some of the above patterns but not experiencing housing price increases? (k-mean clustering of the patterns found)
-10.	Due to the policy changes in 2018, I don’t have much longitudinal data to look at. However, to test my findings, can I find older occurrences of the same patterns and match it with historical gentrification? (k-mean clustering with older data and then researching housing prices in notable areas)
-11.	Are there counties that are exhibiting the early sign of gentrification right now? (k-mean clustering of found patterns)
+10.	Due to the policy changes in 2018, I don’t have much longitudinal data to look at. However, to test my findings, can I find older occurrences of the same patterns and match it with historical price changes? (k-mean clustering with older data and then researching housing prices in notable areas)
+11.	Are there counties that are exhibiting the early signs that are correlated with pricing changes right now? (k-mean clustering of found patterns)
 

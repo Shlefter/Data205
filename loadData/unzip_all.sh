@@ -1,6 +1,9 @@
 #!/bin/bash
-#bash loadData/unzip_and_rename_lar.sh
-echo reminder to look at lars and update unzip file with correct names. Skipped for now
 
-bash loadData/unzip_ts.sh
-bash loadData/unzip_panel.sh
+# Run in parent path regardless of working directory
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd "$parent_path"
+
+bash unzip_and_rename_lar.sh
+bash unzip_ts.sh
+bash unzip_panel.sh
