@@ -1,3 +1,5 @@
 # Downloaded data
 loadData/data
 .venv
+projectCode/meanMeds.csv
+projectCode/meanMedsFiltered.csv
