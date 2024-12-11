@@ -35,7 +35,7 @@ Residential Construction Permits by County
 ### Research Goals and Questions
 My primary goal is to measure housing price changes over time and see how it correlates with changes in the surrounding areas. Secondarily, I would like to use these findings to attempt to find early indicators of housing price change movements and what can be changed to mitigate the movements. For this project, I will be looking at counties where the median housing price increases statisstically significatly larger (95% confidence interval) than the population of counties year over year. Note I will be using median instead of mean because medians are more resistant to outliers, of which the HMDA dataset has many.
 Questions:
-1.	Which counties’ median house prices change by significantly more than average each year? (t-tests of percentage of median increase between two years, derived from median house price of all loan applications by county)
+1.	Which counties’ median house prices change by significantly more than average each year? (z-tests of percentage of median increase between two years, derived from median house price of all loan applications by county)
 2.	Do these increased change rates persist (i. e. If a county increases home value by a large amount one year, is it likely to increase similarly the next year)? (strength and slope of correlation by county from the above derived data)
 3.	Do these counties have a consistent distance to a large city? (i. e. Are people working in major cities moving slightly further away and commuting?) (Mean, median, and standard deviation of the distance for each highlighted county to the closest major city)
 4.	Do these counties experience a change in the demographics applying for loans? (Chi-squared test of demographics)
