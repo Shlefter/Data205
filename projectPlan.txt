@@ -1,0 +1,16 @@
+This file is a copy of my original project plan. In the end, many of these questions yielded little to no correlation, which to me indicated that any model I would build would be incredibly innacurate. I was unable to answer questions 3, 5 (thoguh I did look at the number of construction permits instead), and 8-11 (due to a lack of correlation in my earlier results)
+
+# Research Goals and Questions
+My primary goal is to measure housing price changes over time and see how it correlates with changes in the surrounding areas. Secondarily, I would like to use these findings to attempt to find early indicators of housing price change movements and what can be changed to mitigate the movements. For this project, I will be looking at counties where the median housing price increases statisstically significatly larger (95% confidence interval) than the population of counties year over year. Note I will be using median instead of mean because medians are more resistant to outliers, of which the HMDA dataset has many.
+Questions:
+1.	Which counties’ median house prices change by significantly more than average each year? (z-tests of percentage of median increase between two years, derived from median house price of all loan applications by county)
+2.	Do these increased change rates persist (i. e. If a county increases home value by a large amount one year, is it likely to increase similarly the next year)? (strength and slope of correlation by county from the above derived data)
+3.	Do these counties have a consistent distance to a large city? (i. e. Are people working in major cities moving slightly further away and commuting?) (Mean, median, and standard deviation of the distance for each highlighted county to the closest major city)
+4.	Do these counties experience a change in the demographics applying for loans? (Chi-squared test of demographics)
+5.	Do an increase in home improvement loans and non-person lenders accompany rising prices? (correlation analysis, price by amount of loans)
+6.	Does the number of commuters change in these counties?  (correlation analysis, price by number of commuters)
+7.	Do these counties have an unusually high number of building permits? (Poisson Regression, count of permits and price)
+8.	When do the above changes start appearing (same year as price increase, before, after)? (Granger Causality, price by the above variables)
+9.	Are there other counties showing some of the above patterns but not experiencing housing price increases? (k-mean clustering of the patterns found)
+10.	Due to the policy changes in 2018, I don’t have much longitudinal data to look at. However, to test my findings, can I find older occurrences of the same patterns and match it with historical price changes? (k-mean clustering with older data and then researching housing prices in notable areas)
+11.	Are there counties that are exhibiting the early signs that are correlated with pricing changes right now? (k-mean clustering of found patterns)
