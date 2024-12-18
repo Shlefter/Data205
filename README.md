@@ -57,13 +57,13 @@ Advanced options/troubleshooting: (Note that this section is mostly copied from 
 
 The download script accepts the following option flags:
 
--a: Prints to console the available files for download.
--s: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_, panel_, or ts_.
--p: Downloads all Panel files that are not present.
--t: Downloads all Transmittal Sheet files that are not present.
--l: Downloads all LAR files that are not present.
--F: Deletes the file or file types to be downloaded (the files are then redownloaded).
--h: Prints to console the instructions for using the script.
+- -a: Prints to console the available files for download.
+- -s: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_, panel_, or ts_.
+- -p: Downloads all Panel files that are not present.
+- -t: Downloads all Transmittal Sheet files that are not present.
+- -l: Downloads all LAR files that are not present.
+- -F: Deletes the file or file types to be downloaded (the files are then redownloaded).
+- -h: Prints to console the instructions for using the script.
 
 Download Troubleshooting
 Sometimes files from the National Archives fail to download correctly. An indicator that this happens is the presence of a file with the correct name (such as LAR_20013.zip) that has a file size of 4kb. In these cases, the file must be deleted and re-downloaded. One way to do this is:
@@ -73,12 +73,12 @@ bash download_scripts/download_hmda.sh -Fs <filename>.
 
 Available option flags for the load scripts are as follows:
 
--u: Sets the user role for the Postgres connection, default is postgres.
--p: Sets the password for the Postgres connection, default is blank.
--d: Sets the database for connection, default is postgres.
--h: Sets the database host, default is localhost.
--o: Sets the database connection port, the default is 5432.
---help: Displays the options available for the script.
+- -u: Sets the user role for the Postgres connection, default is postgres.
+- -p: Sets the password for the Postgres connection, default is blank.
+- -d: Sets the database for connection, default is postgres.
+- -h: Sets the database host, default is localhost.
+- -o: Sets the database connection port, the default is 5432.
+- --help: Displays the options available for the script.
 
 ### Repository Overview
 
